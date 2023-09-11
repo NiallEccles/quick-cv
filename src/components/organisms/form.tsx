@@ -18,6 +18,7 @@ import { useForm } from 'react-hook-form';
 const personalSchema = z.object({
   name: z.string().min(1, { message: 'Username must be at least 2 characters.' }).max(50),
   email: z.string().min(1, { message: 'Username must be at least 2 characters.' }).max(50),
+  location: z.string().min(1, { message: 'Username must be at least 2 characters.' }).max(50),
 });
 
 type PersonalSchemaType = z.infer<typeof personalSchema>;
