@@ -15,43 +15,51 @@ import {
 import { Input } from '@/components/ui/input';
 import { useForm } from 'react-hook-form';
 
-const formSchema = z.object({
-  username: z.string().min(2, { message: 'Username must be at least 2 characters.' }).max(50),
+const personalSchema = z.object({
+  name: z.string().min(1, { message: 'Username must be at least 2 characters.' }).max(50),
+  email: z.string().min(1, { message: 'Username must be at least 2 characters.' }).max(50),
 });
 
-export default function FormContainer() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      username: '',
-    },
+type PersonalSchemaType = z.infer<typeof personalSchema>;
+
+export default function PersonalDetails() {
+  const form = useForm<PersonalSchemaType>({
+    resolver: zodResolver(personalSchema),
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: PersonalSchemaType) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
   }
 
-  return (<Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 px-5">
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 px-5">
+        {
+          Object.keys((personalSchema.shape)).map((field, index) => (
             <FormField
-                control={form.control}
-                name="username"
-                render={({ field }) => (
-                    <FormItem>
-                        <FormLabel>Username</FormLabel>
-                        <FormControl>
-                            <Input placeholder="shadcn" {...field} />
-                        </FormControl>
-                        <FormDescription>
-                            This is your public display name.
-                        </FormDescription>
-                        <FormMessage />
-                    </FormItem>
-                )}
-            />
-            <Button type="submit">Submit</Button>
-        </form>
-    </Form>);
+            key={index}
+            control={form.control}
+            name={field as keyof PersonalSchemaType}
+            defaultValue=''
+            render={(t) => {
+              return <FormItem>
+                <FormLabel>{field}</FormLabel>
+                <FormControl>
+                  <Input placeholder="shadcn" {...t.field} />
+                </FormControl>
+                <FormDescription>
+                  This is your public display name.
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            }}
+          />
+          ))
+        }
+        <Button type="submit">Submit</Button>
+      </form>
+    </Form>
+  );
 }
