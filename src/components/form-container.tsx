@@ -12,21 +12,21 @@ export const FormContainer = () => {
     const { control, register } = useForm({
         defaultValues: {
             contacts: [{ name: "Bill", value: "Luo" }]
-          }
+        }
     });
     const { fields, append, prepend, remove, swap, move, insert } = useFieldArray({
         control, // control props comes from useForm (optional: if you are using FormContext)
         name: "contacts", // unique name for your Field Array
     });
-    
+
     const handleFieldChange = (index: number, field: keyof DynamicField, value: string) => {
         const updatedContacts: DynamicField[] = [...contacts];
         (updatedContacts[index] as any)[field] = value;
         setContacts(updatedContacts);
     };
 
-    console.log(useWatch({name: 'contacts', control}));
-    
+    console.log(useWatch({ name: 'contacts', control }));
+
 
     return (
         <div>
@@ -34,8 +34,8 @@ export const FormContainer = () => {
             {fields.map((item, index) => {
                 return (
                     <div key={item.id}>
-                        <Input {...register(`contacts.${index}.name`)}/>
-                        <Input {...register(`contacts.${index}.value`)}/>
+                        <Input {...register(`contacts.${index}.name`)} />
+                        <Input {...register(`contacts.${index}.value`)} />
                         <button type="button" onClick={() => remove(index)}>
                             Delete
                         </button>
