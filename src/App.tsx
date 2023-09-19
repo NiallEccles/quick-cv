@@ -1,13 +1,19 @@
 import './App.css'
 
 import Personal from '@/components/personal/personal';
+import { PersonalFields } from './fields';
 
+// const [formData, setFormData] = useState<{}[]>([{}]);
+
+const handleUpdates = (data: PersonalFields) => {
+  console.log(data);
+}
 
 
 function App() {
   return (
     <>
-      <Personal/>
+      <Personal handleUpdates={handleUpdates}/>
     </>
   )
 }
