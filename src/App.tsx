@@ -6,7 +6,7 @@ import { PersonalFields } from './fields';
 // const [formData, setFormData] = useState<{}[]>([{}]);
 
 const handleUpdates = (data: PersonalFields) => {
-  console.log(data);
+  // console.log(data);
 }
 
 
