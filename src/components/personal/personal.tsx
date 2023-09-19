@@ -14,8 +14,8 @@ const Personal: React.FC<{handleUpdates: Function}> = ({handleUpdates}) => {
     handleUpdates(watch());
 
     return (
-        <Section>
-            <Heading as="h2" mb="4" align="left">Personal Details</Heading>
+        <Section py={'4'}>
+            <Heading as="h2" mb={'4'} align="left">Personal Details</Heading>
 
             <TextField.Root mb="4">
                 <TextField.Slot>
