@@ -1,6 +1,6 @@
 import './App.css'
 
-import Personal from '@/components/personal/personal';
+import Personal from '@/components/personal';
 import { PersonalFields } from './fields';
 
 // const [formData, setFormData] = useState<{}[]>([{}]);
