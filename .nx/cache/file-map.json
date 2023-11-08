@@ -5,6 +5,7 @@
     "@swc/helpers": "~0.5.2",
     "flowbite": "^2.0.0",
     "flowbite-react": "^0.6.4",
+    "lucide-react": "^0.292.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.48.2",
@@ -52,32 +53,6 @@
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
-      "e2e": [
-        {
-          "file": "e2e/.eslintrc.json",
-          "hash": "10160352035353809953"
-        },
-        {
-          "file": "e2e/playwright.config.ts",
-          "hash": "8571723046045246605",
-          "deps": [
-            "npm:@playwright/test",
-            "npm:@nx/playwright",
-            "npm:@nx/devkit"
-          ]
-        },
-        {
-          "file": "e2e/project.json",
-          "hash": "14028057079820498257"
-        },
-        {
-          "file": "e2e/src/example.spec.ts",
-          "hash": "16019101014373124625",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        }
-      ],
       "quick-cv": [
         {
           "file": ".eslintignore",
@@ -340,31 +315,31 @@
         },
         {
           "file": ".nx/cache/d/daemon.log",
-          "hash": "10634222115170992763"
+          "hash": "13808284687515251858"
         },
         {
           "file": ".nx/cache/d/server-process.json",
-          "hash": "17006871325290286675"
+          "hash": "1754230453866724845"
         },
         {
           "file": ".nx/cache/file-map.json",
-          "hash": "461391454623421664"
+          "hash": "2697219722287547700"
         },
         {
           "file": ".nx/cache/lockfile.hash",
-          "hash": "13959497210818238719"
+          "hash": "8622962551921171568"
         },
         {
           "file": ".nx/cache/parsed-lock-file.json",
-          "hash": "12753556018157195808"
+          "hash": "15196457863927591230"
         },
         {
           "file": ".nx/cache/project-graph.json",
-          "hash": "3550871641052937201"
+          "hash": "5055541058645477687"
         },
         {
           "file": ".nx/cache/terminalOutputs/10401174526262777543",
-          "hash": "12940840950666057375"
+          "hash": "6799628574286403009"
         },
         {
           "file": ".nx/cache/terminalOutputs/5175384567555086116",
@@ -400,15 +375,16 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "5616352488080114588"
+          "hash": "5413103381765124076"
         },
         {
           "file": "package.json",
-          "hash": "6352628806102509796",
+          "hash": "4321801680115035125",
           "deps": [
             "npm:@swc/helpers",
             "npm:flowbite",
             "npm:flowbite-react",
+            "npm:lucide-react",
             "npm:react",
             "npm:react-dom",
             "npm:react-hook-form",
@@ -483,6 +459,25 @@
           "hash": "17481894625465100556"
         },
         {
+          "file": "src/app/dynamic-form/dynamic-form.module.css",
+          "hash": "125145030238681982"
+        },
+        {
+          "file": "src/app/dynamic-form/dynamic-form.spec.tsx",
+          "hash": "16505212679428996071",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "src/app/dynamic-form/dynamic-form.tsx",
+          "hash": "13888243616287711240",
+          "deps": [
+            "npm:react-hook-form",
+            "npm:flowbite-react"
+          ]
+        },
+        {
           "file": "src/app/nx-welcome.tsx",
           "hash": "4389251527819925043"
         },
@@ -534,26 +529,33 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "8517094539045667961"
+          "hash": "9543968636307158738"
+        }
+      ],
+      "e2e": [
+        {
+          "file": "e2e/.eslintrc.json",
+          "hash": "10160352035353809953"
         },
         {
-          "file": "src/app/dynamic-form/dynamic-form.spec.tsx",
-          "hash": "16505212679428996071",
+          "file": "e2e/playwright.config.ts",
+          "hash": "8571723046045246605",
           "deps": [
-            "npm:@testing-library/react"
+            "npm:@playwright/test",
+            "npm:@nx/playwright",
+            "npm:@nx/devkit"
           ]
         },
         {
-          "file": "src/app/dynamic-form/dynamic-form.tsx",
-          "hash": "11852464627292150835",
-          "deps": [
-            "npm:react-hook-form",
-            "npm:flowbite-react"
-          ]
+          "file": "e2e/project.json",
+          "hash": "14028057079820498257"
         },
         {
-          "file": "src/app/dynamic-form/dynamic-form.module.css",
-          "hash": "125145030238681982"
+          "file": "e2e/src/example.spec.ts",
+          "hash": "16019101014373124625",
+          "deps": [
+            "npm:@playwright/test"
+          ]
         }
       ]
     }

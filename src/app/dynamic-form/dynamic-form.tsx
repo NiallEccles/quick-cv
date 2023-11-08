@@ -21,7 +21,6 @@ export function DynamicForm(props: DynamicFormProps) {
         fields,
         append,
         remove,
-        swap,
         move,
     } = useFieldArray({
         control,
@@ -29,33 +28,38 @@ export function DynamicForm(props: DynamicFormProps) {
     });
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <ul>
+            <ol>
                 {fields.map((item, index) => {
                     return (
                         <li key={item.id}>
-                            <div>
-                                <div className="mb-2 block">
-                                    <Label htmlFor="email1" value="Your email" />
+                            <div className="flex">
+                                <div>
+                                    <div className="mb-2">
+                                        <Label htmlFor={`test.${index}.experienceName${index}`} value="Your email" />
+                                    </div>
+                                    <TextInput
+                                        id={`test.${index}.experienceName${index}`}
+                                        {...register(`test.${index}.experienceName`, { required: true})}
+                                    />
                                 </div>
-                                {/*<TextInput id="email1" type="email" placeholder="name@flowbite.com" required />*/}
-                                <TextInput
-                                    id='email1'
-                                    {...register(`test.${index}.experienceName`, { required: true})}
-                                />
-                            </div>
+                                <div>
+                                    <div className="mb-2">
+                                        <Label htmlFor={`test.${index}.experienceDescription${index}`} value="Your email" />
+                                    </div>
+                                    <TextInput
+                                        id={`test.${index}.experienceDescription${index}`}
+                                        {...register(`test.${index}.experienceDescription`, { required: true})}
+                                    />
+                                </div>
 
-                            <Controller
-                                render={({ field }) => <input {...field} />}
-                                name={`test.${index}.experienceDescription`}
-                                control={control}
-                            />
-                            <button type="button" onClick={() => remove(index)}>
-                                Delete
-                            </button>
+                                <Button type="button" onClick={() => remove(index)}>
+                                    Delete
+                                </Button>
+                            </div>
                         </li>
                     );
                 })}
-            </ul>
+            </ol>
             <section>
                 <button
                     type="button"
@@ -65,16 +69,9 @@ export function DynamicForm(props: DynamicFormProps) {
                 >
                     append
                 </button>
-                <button type="button" onClick={() => swap(1, 2)}>
-                    swap
-                </button>
 
-                <button type="button" onClick={() => move(1, 2)}>
+                <button type="button" onClick={() => move(0, 1)}>
                     move
-                </button>
-
-                <button type="button" onClick={() => remove(1)}>
-                    remove at
                 </button>
 
                 <button
