@@ -5,6 +5,7 @@
     "@swc/helpers": "~0.5.2",
     "flowbite": "^2.0.0",
     "flowbite-react": "^0.6.4",
+    "formik": "^2.4.5",
     "lucide-react": "^0.292.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -87,8 +88,8 @@
           "hash": "14600148892634157659"
         },
         {
-          "file": ".nx/cache/cloud/2310.19.6.hotfix2/index.js",
-          "hash": "11105368040345262562",
+          "file": ".nx/cache/cloud/2311.09.8.hotfix2/index.js",
+          "hash": "1478706641485954736",
           "deps": [
             "npm:os",
             "npm:assert",
@@ -168,8 +169,8 @@
           ]
         },
         {
-          "file": ".nx/cache/cloud/2310.19.6.hotfix2/lib/daemon/process-run-end.js",
-          "hash": "17993887837223109277",
+          "file": ".nx/cache/cloud/2311.09.8.hotfix2/lib/daemon/process-run-end.js",
+          "hash": "1407987010601608693",
           "deps": [
             "npm:path",
             "npm:os",
@@ -245,8 +246,8 @@
           ]
         },
         {
-          "file": ".nx/cache/cloud/2310.19.6.hotfix2/lib/heartbeat/heartbeat-process.js",
-          "hash": "8101618490335397045",
+          "file": ".nx/cache/cloud/2311.09.8.hotfix2/lib/heartbeat/heartbeat-process.js",
+          "hash": "5633484099946442012",
           "deps": [
             "npm:os",
             "npm:fs",
@@ -311,35 +312,39 @@
         },
         {
           "file": ".nx/cache/cloud/verify.lock",
-          "hash": "7295452226507409608"
-        },
-        {
-          "file": ".nx/cache/d/daemon.log",
-          "hash": "13808284687515251858"
+          "hash": "18318045601325263458"
         },
         {
           "file": ".nx/cache/d/server-process.json",
-          "hash": "1754230453866724845"
+          "hash": "8745081952880890840"
         },
         {
           "file": ".nx/cache/file-map.json",
-          "hash": "2697219722287547700"
+          "hash": "9623389111416440349"
         },
         {
           "file": ".nx/cache/lockfile.hash",
-          "hash": "8622962551921171568"
+          "hash": "10281766946143309647"
         },
         {
           "file": ".nx/cache/parsed-lock-file.json",
-          "hash": "15196457863927591230"
+          "hash": "11407217501664984513"
         },
         {
           "file": ".nx/cache/project-graph.json",
-          "hash": "5055541058645477687"
+          "hash": "9315683165435627503"
         },
         {
           "file": ".nx/cache/terminalOutputs/10401174526262777543",
-          "hash": "6799628574286403009"
+          "hash": "4827988999869706989"
+        },
+        {
+          "file": ".nx/cache/terminalOutputs/12798904078621332867",
+          "hash": "4075601500950325711"
+        },
+        {
+          "file": ".nx/cache/terminalOutputs/17020978483515687086",
+          "hash": "17743452108336491742"
         },
         {
           "file": ".nx/cache/terminalOutputs/5175384567555086116",
@@ -375,15 +380,16 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "5413103381765124076"
+          "hash": "15255802445115876676"
         },
         {
           "file": "package.json",
-          "hash": "4321801680115035125",
+          "hash": "1177443427018675508",
           "deps": [
             "npm:@swc/helpers",
             "npm:flowbite",
             "npm:flowbite-react",
+            "npm:formik",
             "npm:lucide-react",
             "npm:react",
             "npm:react-dom",
@@ -456,24 +462,43 @@
         },
         {
           "file": "src/app/app.tsx",
-          "hash": "17481894625465100556"
+          "hash": "3224255280780833494"
         },
         {
-          "file": "src/app/dynamic-form/dynamic-form.module.css",
+          "file": "src/app/experience-form/experience-form.module.css",
           "hash": "125145030238681982"
         },
         {
-          "file": "src/app/dynamic-form/dynamic-form.spec.tsx",
-          "hash": "16505212679428996071",
+          "file": "src/app/experience-form/experience-form.spec.tsx",
+          "hash": "2455344908448532284",
           "deps": [
             "npm:@testing-library/react"
           ]
         },
         {
-          "file": "src/app/dynamic-form/dynamic-form.tsx",
-          "hash": "13888243616287711240",
+          "file": "src/app/experience-form/experience-form.tsx",
+          "hash": "13760868244283010864",
           "deps": [
             "npm:react-hook-form",
+            "npm:flowbite-react"
+          ]
+        },
+        {
+          "file": "src/app/formik-form/formik-form.module.css",
+          "hash": "125145030238681982"
+        },
+        {
+          "file": "src/app/formik-form/formik-form.spec.tsx",
+          "hash": "14551807499747250670",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "src/app/formik-form/formik-form.tsx",
+          "hash": "14952594590749528018",
+          "deps": [
+            "npm:formik",
             "npm:flowbite-react"
           ]
         },
@@ -526,10 +551,6 @@
             "npm:@vitejs/plugin-react",
             "npm:@nx/vite"
           ]
-        },
-        {
-          "file": ".idea/workspace.xml",
-          "hash": "9543968636307158738"
         }
       ],
       "e2e": [

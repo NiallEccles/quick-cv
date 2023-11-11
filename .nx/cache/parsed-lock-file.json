@@ -2583,6 +2583,15 @@
         "hash": "sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw=="
       }
     },
+    "npm:@types/hoist-non-react-statics": {
+      "type": "npm",
+      "name": "npm:@types/hoist-non-react-statics",
+      "data": {
+        "version": "3.3.5",
+        "packageName": "@types/hoist-non-react-statics",
+        "hash": "sha512-SbcrWzkKBw2cdwRTwQAswfpB9g9LJWfjtUeW/jvNwbhC8cpmmNYVePa+ncbUe0rGTQ7G3Ff6mYUN2VMfLVr+Sg=="
+      }
+    },
     "npm:@types/http-cache-semantics": {
       "type": "npm",
       "name": "npm:@types/http-cache-semantics",
@@ -4302,6 +4311,15 @@
         "hash": "sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A=="
       }
     },
+    "npm:deepmerge@2.2.1": {
+      "type": "npm",
+      "name": "npm:deepmerge@2.2.1",
+      "data": {
+        "version": "2.2.1",
+        "packageName": "deepmerge",
+        "hash": "sha512-R9hc1Xa/NOBi9WRVUWg19rl1UB7Tt4kuPd+thNJgFZoxXsTz7ncaPaeIm+40oSGuP33DfMb4sZt1QIGiJzC4EA=="
+      }
+    },
     "npm:defaults": {
       "type": "npm",
       "name": "npm:defaults",
@@ -5409,6 +5427,15 @@
         "hash": "sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww=="
       }
     },
+    "npm:formik": {
+      "type": "npm",
+      "name": "npm:formik",
+      "data": {
+        "version": "2.4.5",
+        "packageName": "formik",
+        "hash": "sha512-Gxlht0TD3vVdzMDHwkiNZqJ7Mvg77xQNfmBRrNtvzcHZs72TJppSTDKHpImCMJZwcWPBJ8jSQQ95GJzXFf1nAQ=="
+      }
+    },
     "npm:fraction.js": {
       "type": "npm",
       "name": "npm:fraction.js",
@@ -5668,6 +5695,15 @@
         "version": "1.2.0",
         "packageName": "he",
         "hash": "sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw=="
+      }
+    },
+    "npm:hoist-non-react-statics": {
+      "type": "npm",
+      "name": "npm:hoist-non-react-statics",
+      "data": {
+        "version": "3.3.2",
+        "packageName": "hoist-non-react-statics",
+        "hash": "sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw=="
       }
     },
     "npm:hosted-git-info": {
@@ -6415,6 +6451,15 @@
         "version": "4.17.21",
         "packageName": "lodash",
         "hash": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
+      }
+    },
+    "npm:lodash-es": {
+      "type": "npm",
+      "name": "npm:lodash-es",
+      "data": {
+        "version": "4.17.21",
+        "packageName": "lodash-es",
+        "hash": "sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw=="
       }
     },
     "npm:lodash.debounce": {
@@ -7326,6 +7371,15 @@
         "hash": "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
       }
     },
+    "npm:react-fast-compare": {
+      "type": "npm",
+      "name": "npm:react-fast-compare",
+      "data": {
+        "version": "2.0.4",
+        "packageName": "react-fast-compare",
+        "hash": "sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw=="
+      }
+    },
     "npm:react-hook-form": {
       "type": "npm",
       "name": "npm:react-hook-form",
@@ -8044,6 +8098,15 @@
         "version": "2.3.8",
         "packageName": "through",
         "hash": "sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg=="
+      }
+    },
+    "npm:tiny-warning": {
+      "type": "npm",
+      "name": "npm:tiny-warning",
+      "data": {
+        "version": "1.0.3",
+        "packageName": "tiny-warning",
+        "hash": "sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA=="
       }
     },
     "npm:tinybench": {
@@ -12203,6 +12266,16 @@
       "type": "static"
     },
     {
+      "source": "npm:@types/hoist-non-react-statics",
+      "target": "npm:@types/react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/hoist-non-react-statics",
+      "target": "npm:hoist-non-react-statics",
+      "type": "static"
+    },
+    {
       "source": "npm:@types/keyv",
       "target": "npm:@types/node",
       "type": "static"
@@ -15358,6 +15431,51 @@
       "type": "static"
     },
     {
+      "source": "npm:formik",
+      "target": "npm:react",
+      "type": "static"
+    },
+    {
+      "source": "npm:formik",
+      "target": "npm:@types/hoist-non-react-statics",
+      "type": "static"
+    },
+    {
+      "source": "npm:formik",
+      "target": "npm:deepmerge@2.2.1",
+      "type": "static"
+    },
+    {
+      "source": "npm:formik",
+      "target": "npm:hoist-non-react-statics",
+      "type": "static"
+    },
+    {
+      "source": "npm:formik",
+      "target": "npm:lodash",
+      "type": "static"
+    },
+    {
+      "source": "npm:formik",
+      "target": "npm:lodash-es",
+      "type": "static"
+    },
+    {
+      "source": "npm:formik",
+      "target": "npm:react-fast-compare",
+      "type": "static"
+    },
+    {
+      "source": "npm:formik",
+      "target": "npm:tiny-warning",
+      "type": "static"
+    },
+    {
+      "source": "npm:formik",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
       "source": "npm:fs-extra",
       "target": "npm:graceful-fs",
       "type": "static"
@@ -15590,6 +15708,11 @@
     {
       "source": "npm:hasown",
       "target": "npm:function-bind",
+      "type": "static"
+    },
+    {
+      "source": "npm:hoist-non-react-statics",
+      "target": "npm:react-is@16.13.1",
       "type": "static"
     },
     {
