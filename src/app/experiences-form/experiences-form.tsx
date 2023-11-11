@@ -1,10 +1,10 @@
-import styles from './formik-form.module.css';
+import styles from './experiences-form.module.css';
 import React from 'react';
 import {Form, Formik, FieldArray, Field} from "formik";
 import { Button, Label, TextInput } from 'flowbite-react';
 
 /* eslint-disable-next-line */
-export interface FormikFormProps {}
+export interface ExperiencesFormProps {}
 
 type ExperienceFields = {
     experiences: Array<
@@ -28,7 +28,7 @@ const initialValues: ExperienceFields = {
     ]
 };
 
-export function FormikForm(props: FormikFormProps) {
+export function ExperiencesForm(props: ExperiencesFormProps) {
   return (
     <div className={styles['container']}>
         <Formik
@@ -72,4 +72,4 @@ export function FormikForm(props: FormikFormProps) {
   );
 }
 
-export default FormikForm;
+export default ExperiencesForm;

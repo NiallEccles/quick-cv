@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import FormikForm from './formik-form';
+import FormikForm from './experiences-form';
 
 describe('FormikForm', () => {
   it('should render successfully', () => {
