@@ -2,57 +2,15 @@ import styles from './experiences-form.module.css';
 import React from 'react';
 import {Form, Formik, FieldArray, Field} from "formik";
 import { Button, Label, TextInput, Checkbox } from 'flowbite-react';
+import { ExperienceFields } from "../types";
+import useInitialValues from "../hooks/useInitialValues";
 
 /* eslint-disable-next-line */
 export interface ExperiencesFormProps {}
 
-type ExperienceFields = {
-    experiences: Array<
-        {
-            id: string;
-            school: string;
-            degree: string;
-            currentlyStudying: boolean;
-            startDate: string;
-            endDate: string;
-            description: string;
-        }
-    >
-}
-
-const initialValues: ExperienceFields = {
-    experiences: [
-        {
-            id: '1',
-            school: "1",
-            degree: "1",
-            currentlyStudying: false,
-            startDate: "1",
-            endDate: "1",
-            description: "",
-        },
-        {
-            id: '2',
-            school: "2",
-            degree: "2",
-            currentlyStudying: false,
-            startDate: "2",
-            endDate: "2",
-            description: "",
-        },
-        {
-            id: '3',
-            school: "3",
-            degree: "3",
-            currentlyStudying: false,
-            startDate: "3",
-            endDate: "3",
-            description: "",
-        }
-    ]
-};
-
 export function ExperiencesForm(props: ExperiencesFormProps) {
+  const initialValues: ExperienceFields = useInitialValues();
+
   return (
     <div className={styles['container']}>
         <Formik
@@ -135,7 +93,7 @@ export function ExperiencesForm(props: ExperiencesFormProps) {
                         )}
                     </FieldArray>
                     <Button type="submit">Submit</Button>
-                </Form>
+                 </Form>
             )}
         </Formik>
     </div>
