@@ -1,6 +1,15 @@
 const useInitialValues = () => {
     return {
-        someobj: [],
+        personalDetails: {
+            firstName: '',
+            lastName: '',
+            jobTitle: '',
+            email: '',
+            phone: '',
+            country: '',
+            city: '',
+            summary: ''
+        },
         experiences: [
             {
                 id: '1',
