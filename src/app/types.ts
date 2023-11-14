@@ -1,13 +1,11 @@
 export type PersonalFields = {
-    personalDetails: {
-        firstName: string;
-        lastName: string;
-        jobTitle: string;
-        email: string;
-        phone: string;
-        country: string;
-        city: string;
-    }
+    firstName: string;
+    lastName: string;
+    jobTitle: string;
+    email: string;
+    phone: string;
+    country: string;
+    city: string;
 }
 
 export type EmploymentFields = {
@@ -23,8 +21,7 @@ export type EmploymentFields = {
     >
 };
 
-export type ExperienceFields = {
-    experiences: Array<
+export type ExperienceFields = Array<
         {
             id: string;
             school: string;
@@ -35,7 +32,6 @@ export type ExperienceFields = {
             description: string;
         }
     >
-}
 
 export type Skills = Array<string>;
 
