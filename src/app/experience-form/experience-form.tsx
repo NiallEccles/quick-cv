@@ -1,6 +1,6 @@
 import styles from './experience-form.module.css';
 import { Field, FieldArray } from 'formik';
-import { Button, Checkbox, Label, TextInput, Datepicker } from 'flowbite-react';
+import { Button, Input } from '@mantine/core';
 import {ExperienceFields, PersonalFields} from "../types";
 import React from "react";
 
@@ -20,8 +20,8 @@ export function ExperienceForm(props: ExperienceFormProps) {
                         props.values.map((experience, index) => (
                             <div key={index}>
                                 <h3>{`${props.values[index].school} - ${props.values[index].degree}`}</h3>
-                                <Label htmlFor={`experiences.${index}.school`} value="School"/>
-                                <TextInput
+                                <label htmlFor={`experiences.${index}.school`}>School</label>
+                                <Input
                                     name={`experiences.${index}.school`}
                                     id={`experiences.${index}.school`}
                                     value={props.values[index].school}
