@@ -8,7 +8,7 @@ import PersonalForm from "./personal-form/personal-form";
 import useInitialValues from "./hooks/useInitialValues";
 import {Formik, Form} from "formik";
 import validationSchema from "./validationSchema";
-import {Button} from "flowbite-react";
+import { Button } from '@mantine/core';
 import ExperienceForm from "./experience-form/experience-form";
 
 export function App() {
