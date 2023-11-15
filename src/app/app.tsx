@@ -33,7 +33,7 @@ export function App() {
                     )}
                 </Formik>
             </Grid.Col>
-            <Grid.Col span={6}>
+            <Grid.Col style={{height: '100vh'}} span={6}>
                 <PdfPreview/>
             </Grid.Col>
         </Grid>

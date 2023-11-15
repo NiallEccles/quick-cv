@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 export function PdfPreview(props: PdfPreviewProps) {
   return (
-    <PDFViewer>
+    <PDFViewer width="100%" height="100%">
         <Document>
             <Page size="A4" style={styles.page}>
                 <View style={styles.section}>
