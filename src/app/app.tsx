@@ -8,27 +8,35 @@ import PersonalForm from "./personal-form/personal-form";
 import useInitialValues from "./hooks/useInitialValues";
 import {Formik, Form} from "formik";
 import validationSchema from "./validationSchema";
-import { Button, Space } from '@mantine/core';
+import { Button, Space, Grid } from '@mantine/core';
 import ExperienceForm from "./experience-form/experience-form";
+import PdfPreview from "./pdf-preview/pdf-preview";
 
 export function App() {
     const initialValues = useInitialValues();
     const handleSubmit = (e: any) => console.log(e);
     return (
-        <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={handleSubmit}
-        >
-            {({ values: {personalDetails, experiences}, handleSubmit, isSubmitting, handleChange}) => (
-                <Form>
-                    <PersonalForm values={personalDetails} handleChange={handleChange}/>
-                    <ExperienceForm values={experiences} handleChange={handleChange}/>
-                    <Space h="md" />
-                    <Button type="submit">Submit</Button>
-                </Form>
-            )}
-        </Formik>
+        <Grid>
+            <Grid.Col span={6}>
+                <Formik
+                    initialValues={initialValues}
+                    validationSchema={validationSchema}
+                    onSubmit={handleSubmit}
+                >
+                    {({ values: {personalDetails, experiences}, handleSubmit, isSubmitting, handleChange}) => (
+                        <Form>
+                            <PersonalForm values={personalDetails} handleChange={handleChange}/>
+                            <ExperienceForm values={experiences} handleChange={handleChange}/>
+                            <Space h="md" />
+                            <Button type="submit">Submit</Button>
+                        </Form>
+                    )}
+                </Formik>
+            </Grid.Col>
+            <Grid.Col span={6}>
+                <PdfPreview/>
+            </Grid.Col>
+        </Grid>
     )
 }
 
