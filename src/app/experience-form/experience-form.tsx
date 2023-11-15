@@ -1,6 +1,6 @@
 import styles from './experience-form.module.css';
 import { Field, FieldArray } from 'formik';
-import { Button, Input } from '@mantine/core';
+import { Button, Input, Space } from '@mantine/core';
 import {ExperienceFields, PersonalFields} from "../types";
 import React from "react";
 
@@ -35,6 +35,7 @@ export function ExperienceForm(props: ExperienceFormProps) {
                             )
                         )
                     }
+                    <Space h="xs"/>
                     <Button
                         type="button"
                         onClick={() => push({ school: ''  })}
