@@ -26,6 +26,7 @@ export function App() {
                     {({ values: {personalDetails, experiences}, handleSubmit, isSubmitting, handleChange}) => (
                         <Form>
                             <PersonalForm values={personalDetails} handleChange={handleChange}/>
+                            <Space h="xl" />
                             <ExperienceForm values={experiences} handleChange={handleChange}/>
                             <Space h="md" />
                             <Button type="submit">Submit</Button>
