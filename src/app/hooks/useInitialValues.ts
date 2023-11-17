@@ -1,8 +1,7 @@
 const useInitialValues = () => {
     return {
         personalDetails: {
-            firstName: '',
-            lastName: '',
+            name: '',
             jobTitle: '',
             email: '',
             phone: '',

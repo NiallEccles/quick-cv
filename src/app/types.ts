@@ -1,6 +1,5 @@
 export type PersonalFields = {
-    firstName: string;
-    lastName: string;
+    name: string;
     jobTitle: string;
     email: string;
     phone: string;
