@@ -8,7 +8,7 @@ import PersonalForm from "./personal-form/personal-form";
 import useInitialValues from "./hooks/useInitialValues";
 import {Formik, Form} from "formik";
 import validationSchema from "./validationSchema";
-import { Button, Space, Grid } from '@mantine/core';
+import {Button, Space, Grid, Box} from '@mantine/core';
 import ExperienceForm from "./experience-form/experience-form";
 import PdfPreview from "./pdf-preview/pdf-preview";
 
@@ -17,7 +17,7 @@ export function App() {
     const handleSubmit = (e: any) => console.log(e);
     return (
         <Grid>
-            <Grid.Col span={6}>
+            <Grid.Col span={6} p='xl'>
                 <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
@@ -34,7 +34,8 @@ export function App() {
                 </Formik>
             </Grid.Col>
             <Grid.Col style={{height: '100vh'}} span={6}>
-                <PdfPreview/>
+                <Box bg="gray.2" h='100%'>
+                </Box>
             </Grid.Col>
         </Grid>
     )

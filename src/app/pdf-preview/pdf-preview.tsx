@@ -1,4 +1,5 @@
-import { PDFViewer, Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+import PdfViewer from "../pdf-viewer/pdf-viewer";
 
 /* eslint-disable-next-line */
 export interface PdfPreviewProps {}
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
 
 export function PdfPreview(props: PdfPreviewProps) {
   return (
-    <PDFViewer width="100%" height="100%">
+    <PdfViewer>
         <Document>
             <Page size="A4" style={styles.page}>
                 <View style={styles.section}>
@@ -28,7 +29,7 @@ export function PdfPreview(props: PdfPreviewProps) {
                 </View>
             </Page>
         </Document>
-    </PDFViewer>
+    </PdfViewer>
   );
 }
 
