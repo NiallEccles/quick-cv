@@ -2,7 +2,8 @@ import styles from './experience-form.module.css';
 import { Field, FieldArray } from 'formik';
 import {Button, Divider, Group, Input, Space, Stack, Checkbox, Title} from '@mantine/core';
 import {ExperienceFields, PersonalFields} from "../types";
-import React from "react";
+import React, {useEffect} from "react";
+import useInitialValues from "../hooks/useInitialValues";
 
 /* eslint-disable-next-line */
 export interface ExperienceFormProps {
@@ -12,6 +13,7 @@ export interface ExperienceFormProps {
 
 
 export function ExperienceForm(props: ExperienceFormProps) {
+    const initialValues = useInitialValues();
     return (
         <FieldArray name="experiences">
             {({remove, push}) => (
@@ -51,6 +53,16 @@ export function ExperienceForm(props: ExperienceFormProps) {
                                 </Group>
                                 <Space h="md" />
                                 <Group grow>
+                                    <Checkbox
+                                        name={`experiences.${index}.currentlyStudying`}
+                                        id={`experiences.${index}.currentlyStudying`}
+                                        label="I currently work here"
+                                        checked={props.values[index].currentlyStudying}
+                                        onChange={props.handleChange}
+                                    />
+                                </Group>
+                                <Space h="md" />
+                                <Group grow>
                                     <Stack gap="xs">
                                         <label htmlFor={`experiences.${index}.startDate`}>
                                             <Title order={3} size="h4">Start Date</Title>
@@ -82,17 +94,9 @@ export function ExperienceForm(props: ExperienceFormProps) {
                                         )
                                     }
                                 </Group>
+                                {/*<label htmlFor={`experiences.${index}.school`}>School</label>*/}
                                 <Space h="md" />
-                                <Group grow>
-                                    <Checkbox
-                                        name={`experiences.${index}.currentlyStudying`}
-                                        id={`experiences.${index}.currentlyStudying`}
-                                        label="I currently work here"
-                                        onChange={props.handleChange}
-                                    />
-                                </Group>
-                                <label htmlFor={`experiences.${index}.school`}>School</label>
-                                <Button type="button" onClick={() => remove(index)}>
+                                <Button type="button" variant="danger" onClick={() => remove(index)}>
                                     Remove
                                 </Button>
                             </div>
@@ -101,10 +105,11 @@ export function ExperienceForm(props: ExperienceFormProps) {
                     }
                     <Space h="xs"/>
                     <Button
+                        fullWidth
                         type="button"
-                        onClick={() => push({ school: ''  })}
+                        onClick={() => push(initialValues.experiences)}
                     >
-                        Add Experience
+                        Add One More Experience
                     </Button>
                 </div>
                 )}
