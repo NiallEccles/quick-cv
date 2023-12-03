@@ -10,14 +10,13 @@ import {Formik, Form} from "formik";
 import validationSchema from "./validationSchema";
 import {Button, Space, Grid, Box} from '@mantine/core';
 import ExperienceForm from "./experience-form/experience-form";
-import PdfPreview from "./pdf-preview/pdf-preview";
 
 export function App() {
     const initialValues = useInitialValues();
     const handleSubmit = (e: any) => console.log(e);
     return (
         <Grid>
-            <Grid.Col span={6} p='xl'>
+            <Grid.Col span={12} p='xl'>
                 <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}

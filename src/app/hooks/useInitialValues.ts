@@ -1,3 +1,5 @@
+import { nanoid } from 'nanoid';
+
 const useInitialValues = () => {
     return {
         personalDetails: {
@@ -11,7 +13,7 @@ const useInitialValues = () => {
         },
         experiences: [
             {
-                id: '1',
+                id: nanoid(),
                 school: "1",
                 degree: "1",
                 currentlyStudying: false,

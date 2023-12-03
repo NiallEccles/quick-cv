@@ -1,9 +1,11 @@
 import styles from './experience-form.module.css';
 import { Field, FieldArray } from 'formik';
-import {Button, Divider, Group, Input, Space, Stack, Checkbox, Title} from '@mantine/core';
+import {Button, Divider, Group, Input, Space, Stack, Checkbox, Title, Accordion } from '@mantine/core';
 import {ExperienceFields, PersonalFields} from "../types";
 import React, {useEffect} from "react";
 import useInitialValues from "../hooks/useInitialValues";
+import { Camera } from 'lucide-react';
+import { nanoid } from 'nanoid';
 
 /* eslint-disable-next-line */
 export interface ExperienceFormProps {
@@ -13,16 +15,22 @@ export interface ExperienceFormProps {
 
 
 export function ExperienceForm(props: ExperienceFormProps) {
-    const initialValues = useInitialValues();
+    // const initialValues = useInitialValues();
+
     return (
         <FieldArray name="experiences">
             {({remove, push}) => (
                 <div>
-                    <Title order={2} size="h3" mb='sm'>Experience</Title>
+                    <Title order={2} size="h3" mb='sm'>Education</Title>
                     <Divider my="sm" variant="dashed" />
+                    <Accordion multiple defaultValue={[props.values[props.values.length - 1].id]}>
                     {props.values.length > 0 &&
                         props.values.map((experience, index) => (
-                            <div key={index}>
+                            <Accordion.Item value={experience.id} key={experience.id}>
+                                <Accordion.Control>
+                                    {experience.school}
+                                </Accordion.Control>
+                                <Accordion.Panel>
                                 <Group grow>
                                     <Stack gap="xs">
                                         <label htmlFor={`experiences.${index}.school`}>
@@ -94,22 +102,40 @@ export function ExperienceForm(props: ExperienceFormProps) {
                                         )
                                     }
                                 </Group>
-                                {/*<label htmlFor={`experiences.${index}.school`}>School</label>*/}
                                 <Space h="md" />
                                 <Button type="button" variant="danger" onClick={() => remove(index)}>
                                     Remove
                                 </Button>
-                            </div>
+                                </Accordion.Panel>
+                                {/*<label htmlFor={`experiences.${index}.school`}>School</label>*/}
+                            </Accordion.Item>
                             )
                         )
                     }
+                    </Accordion>
                     <Space h="xs"/>
                     <Button
                         fullWidth
                         type="button"
-                        onClick={() => push(initialValues.experiences)}
+                        onClick={() => {
+                            // console.log(initialValues.experiences)
+                            const newId = nanoid();
+                            const newItem =
+                                {
+                                    id: newId,
+                                    school: "School Name",
+                                    degree: "",
+                                    currentlyStudying: false,
+                                    startDate: "",
+                                    endDate: "",
+                                    description: "",
+                                };
+                            console.log(newItem);
+                            push(newItem);
+                        }
+                        }
                     >
-                        Add One More Experience
+                        Add One More Education
                     </Button>
                 </div>
                 )}
