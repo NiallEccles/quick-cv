@@ -10,6 +10,7 @@ import {Formik, Form} from "formik";
 import validationSchema from "./validationSchema";
 import {Button, Space, Grid, Box} from '@mantine/core';
 import ExperienceForm from "./experience-form/experience-form";
+import EmploymentForm from "./employment-form/employment-form";
 
 export function App() {
     const initialValues = useInitialValues();
@@ -22,21 +23,23 @@ export function App() {
                     validationSchema={validationSchema}
                     onSubmit={handleSubmit}
                 >
-                    {({ values: {personalDetails, experiences}, handleSubmit, isSubmitting, handleChange}) => (
+                    {({ values: {personalDetails, experiences, employments}, handleSubmit, isSubmitting, handleChange}) => (
                         <Form>
                             <PersonalForm values={personalDetails} handleChange={handleChange}/>
                             <Space h="xl" />
                             <ExperienceForm values={experiences} handleChange={handleChange}/>
+                            <Space h="xl" />
+                            <EmploymentForm values={employments} handleChange={handleChange}/>
                             <Space h="md" />
                             <Button type="submit">Submit</Button>
                         </Form>
                     )}
                 </Formik>
             </Grid.Col>
-            <Grid.Col style={{height: '100vh'}} span={6}>
-                <Box bg="gray.2" h='100%'>
-                </Box>
-            </Grid.Col>
+            {/*<Grid.Col style={{height: '100vh'}} span={6}>*/}
+            {/*    <Box bg="gray.2" h='100%'>*/}
+            {/*    </Box>*/}
+            {/*</Grid.Col>*/}
         </Grid>
     )
 }

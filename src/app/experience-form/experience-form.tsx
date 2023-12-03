@@ -23,7 +23,7 @@ export function ExperienceForm(props: ExperienceFormProps) {
                 <div>
                     <Title order={2} size="h3" mb='sm'>Education</Title>
                     <Divider my="sm" variant="dashed" />
-                    <Accordion multiple defaultValue={[props.values[props.values.length - 1].id]}>
+                    <Accordion multiple>
                     {props.values.length > 0 &&
                         props.values.map((experience, index) => (
                             <Accordion.Item value={experience.id} key={experience.id}>

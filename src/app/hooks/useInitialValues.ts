@@ -21,6 +21,17 @@ const useInitialValues = () => {
                 endDate: "1",
                 description: "",
             },
+        ],
+        employments: [
+            {
+                id: nanoid(),
+                title: "Job Title",
+                employer: "",
+                currentlyWorking: false,
+                startDate: "1",
+                endDate: "1",
+                description: "",
+            },
         ]
     }
 };
