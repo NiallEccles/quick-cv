@@ -64,7 +64,7 @@ export function ExperienceForm(props: ExperienceFormProps) {
                                     <Checkbox
                                         name={`experiences.${index}.currentlyStudying`}
                                         id={`experiences.${index}.currentlyStudying`}
-                                        label="I currently work here"
+                                        label="I currently study here"
                                         checked={props.values[index].currentlyStudying}
                                         onChange={props.handleChange}
                                     />
