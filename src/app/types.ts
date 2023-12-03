@@ -7,18 +7,17 @@ export type PersonalFields = {
     city: string;
 }
 
-export type EmploymentFields = {
-    employments: Array<
-        {
-            title: string;
-            employer: string;
-            currentlyWorking: boolean;
-            startDate: string;
-            endDate: string;
-            description: string;
-        }
-    >
-};
+export type EmploymentFields = Array<
+    {
+        id: string;
+        title: string;
+        employer: string;
+        currentlyWorking: boolean;
+        startDate: string;
+        endDate: string;
+        description: string;
+    }
+>
 
 export type ExperienceFields = Array<
         {
