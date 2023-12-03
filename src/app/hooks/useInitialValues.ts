@@ -14,8 +14,8 @@ const useInitialValues = () => {
         experiences: [
             {
                 id: nanoid(),
-                school: "1",
-                degree: "1",
+                school: "School Name",
+                degree: "",
                 currentlyStudying: false,
                 startDate: "1",
                 endDate: "1",
